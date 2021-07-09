@@ -5,6 +5,7 @@ export const DetailsPage = ()=>{
 
     return(
         <div>
+            <button>Voltar</button>
             <h1>Detalhes Pokemons</h1>
         </div>
 
