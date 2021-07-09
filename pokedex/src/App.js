@@ -1,6 +1,6 @@
 import React from "react";
 import { Router } from './route/Router.js';
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
 
 
 export default function App() {
@@ -17,13 +17,9 @@ export default function App() {
 
       <Router />
 
-function App() {
-  return (
-    <div>
-      Olá mundo!
+
     </div>
-  );
+  )
 }
 
-export default App;
 
