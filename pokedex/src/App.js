@@ -1,25 +1,21 @@
 import React from "react";
 import { Router } from './route/Router.js';
-// import { useHistory } from 'react-router-dom'
+import GlobalState from './global/GlobalState';
+
 
 
 export default function App() {
 
-  // const goToPokedexPage= () =>{
-  //   history.push('/pokedex/list')
-  // }
   return (
-    <div>
-       <header>
-        <h1>POKEMONS</h1>
-        <button >Ver minha POKEDEX</button>
-      </header>
 
-      <Router />
-
-
-    </div>
-  )
+    <>
+      <h1>POKEMONS</h1>
+      <button >Ver minha POKEDEX</button>
+      
+      <GlobalState>
+        <Router />
+      </GlobalState>
+      
+    </>
+  );
 }
-
-
