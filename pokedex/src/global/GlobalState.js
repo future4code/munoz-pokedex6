@@ -19,16 +19,13 @@ const GlobalState = (props) => {
     useEffect(() => {
         const listPokemons = []
             namePokemon.forEach((item) => {
-            axios.get(item.url)
+            axios.get(`${BASE_URL}/pokemon/${item.name}`)
             .then((response) => {
                 listPokemons.push(response.data)
                     if(listPokemons.length === 20){
                         const orderList = listPokemons.sort((a, b) =>{
-
                             return a.id - b.id
                         })
-                       
-                       
                         setDataPokemon(orderList)
                     }
             })
@@ -39,8 +36,9 @@ const GlobalState = (props) => {
 
 
     const getNamePokemon = () => {
-        axios.get(`${BASE_URL}/pokemon`)
-        .then((response) => setNamePokemon(response.data.results))
+        axios.get(`${BASE_URL}/pokemon?limit=20`)
+        .then((response) => { 
+        setNamePokemon(response.data.results)})
         .catch((err) => console.log(err.message))
     }
 
