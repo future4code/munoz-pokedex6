@@ -5,10 +5,9 @@ export const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-   
-
-    width:100vw;
-    height:92vh;
+    flex-direction: column;
+    width:20vw;
+    height:20vh;
     
 `
 
