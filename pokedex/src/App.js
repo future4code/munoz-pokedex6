@@ -10,8 +10,7 @@ export default function App() {
 
     <>
       <h1>POKEMONS</h1>
-      <button >Ver minha POKEDEX</button>
-      
+     
       <GlobalState>
         <Router />
       </GlobalState>
