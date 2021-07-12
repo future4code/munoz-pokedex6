@@ -12,48 +12,45 @@ import GlobalStateContext from "../../global/GlobalStateContext";
 
 export const CardPokemon = (props)=> {
     const history = useHistory();
-    const { pokemons, setPokemons, pokedex, setPokedex } = useContext(
+    const { dataPokemon, setDataPokemon, pokedex, setPokedex } = useContext(
       GlobalStateContext
-    );
+    )
   
     const addToPokedex = () => {
-      const pokeIndex = pokemons.findIndex(
-        (item) => item.name === props.pokemon.name
-      );
-      const newPokemonsList = [...pokemons];
+      const pokeIndex = dataPokemon.findIndex((item) => item.name === props.pokemon.name)
+
+      const newPokemonsList = [...dataPokemon];
       newPokemonsList.splice(pokeIndex, 1);
       const orderedPokemons = newPokemonsList.sort((a, b) => {
         return a.id - b.id;
-      });
+      })
   
-      const newPokedexList = [...pokedex, props.pokemonmon];
+      const newPokedexList = [...pokedex, props.pokemon];
       const orderedPokedex = newPokedexList.sort((a, b) => {
         return a.id - b.id;
-      });
+      })
   
       setPokedex(orderedPokedex);
-      setPokemons(orderedPokemons);
-    };
+      setDataPokemon(orderedPokemons);
+    }
   
     const removeFromPokedex = () => {
-      const pokeIndex = pokedex.findIndex(
-        (item) => item.name === props.pokemon.name
-      );
+      const pokeIndex = pokedex.findIndex((item) => item.name === props.pokemon.name)
   
       const newPokedexList = [...pokedex];
       newPokedexList.splice(pokeIndex, 1);
       const orderedPokedex = newPokedexList.sort((a, b) => {
         return a.id - b.id;
-      });
+      })
   
-      const newPokemonsList = [...pokemons, props.pokemon];
+      const newPokemonsList = [...dataPokemon, props.pokemon];
       const orderedPokemons = newPokemonsList.sort((a, b) => {
         return a.id - b.id;
-      });
-  
+      })
+
       setPokedex(orderedPokedex);
-      setPokemons(orderedPokemons);
-    };
+      setDataPokemon(orderedPokemons);
+    }
   
     return (
       <CardContainer>
@@ -76,5 +73,5 @@ export const CardPokemon = (props)=> {
           </button>
         </ButtonsContainer>
       </CardContainer>
-    );
+    )
 }

@@ -1,13 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom'
+import { Header } from '../../components/Header/Header';
+import { CardPokemon } from '../../components/CardPokemon/CardPokemon';
+import GlobalStateContext from '../../global/GlobalStateContext';
+import { goToHomePage } from '../../route/coordinator';
 
 export const PokedexPage = ()=>{
-
-    return(
+    const { pokedex } = useContext(GlobalStateContext);
+    const history = useHistory();
+  
+    return (
+      <>
+        <Header
+          title={"Pokédex"}
+          leftButtonFunction={() => goToHomePage (history)}
+        />
         <div>
-            <button>Voltar para lista de pokemons</button>
-            <h1>Lista de Pokemons</h1>
+          {pokedex &&
+            pokedex.map((pokemon) => {
+              return <CardPokemon isPokedex key={pokemon.name} pokemon={pokemon} />;
+            })}
         </div>
-
+      </>
     )
-}
+  }
