@@ -9,7 +9,6 @@ export default function App() {
   return (
 
     <>
-      <h1>POKEMONS</h1>
      
       <GlobalState>
         <Router />

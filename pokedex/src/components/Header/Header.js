@@ -1,6 +1,7 @@
 import React from 'react'
 import { useHistory } from "react-router-dom"
 import {goToPokedexPage} from '../../route/coordinator'
+import { HeaderContainer } from './styled'
 
 export const Header = ({ leftButtonFunction, title, showRightButton })=> {
     const history = useHistory();
@@ -16,7 +17,7 @@ export const Header = ({ leftButtonFunction, title, showRightButton })=> {
       }
     };
     return ( 
-    <div>
+    <HeaderContainer>
         <button onClick={leftButtonFunction}>
           {leftButtonTitle()}
         </button>
@@ -26,5 +27,5 @@ export const Header = ({ leftButtonFunction, title, showRightButton })=> {
             Ir para pokedex
           </button>
         )} */}
-      </div>)
+      </HeaderContainer>)
 }

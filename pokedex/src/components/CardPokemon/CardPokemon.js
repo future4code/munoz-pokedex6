@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { 
     CardContainer, 
-    // Img,
-    // PokemonImg,
-    // ButtonsContainer
+     Img,
+     PokemonImg,
+     ButtonsContainer
    
 } from './styled';
 import { goToDetailsPage } from "../../route/coordinator";
@@ -57,13 +57,13 @@ export const CardPokemon = (props)=> {
   
     return (
       <CardContainer>
-        <div>
-          <img
+        <PokemonImg>
+          <Img
             src={props.pokemon && props.pokemon.sprites.front_default}
             alt={props.pokemon.name}
           />
-        </div>
-        <div>
+        </PokemonImg>
+        <ButtonsContainer>
           <button onClick={props.isPokedex ? removeFromPokedex : addToPokedex}>
             {props.isPokedex ? "Remover da Pokédex" : "Adicionar a Pokédex"}
           </button>
@@ -74,7 +74,7 @@ export const CardPokemon = (props)=> {
           >
             Ver detalhes
           </button>
-        </div>
+        </ButtonsContainer>
       </CardContainer>
     );
 }
