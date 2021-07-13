@@ -4,6 +4,7 @@ import { Header } from '../../components/Header/Header';
 import { CardPokemon } from '../../components/CardPokemon/CardPokemon';
 import GlobalStateContext from '../../global/GlobalStateContext';
 import { goToHomePage } from '../../route/coordinator';
+import { PokedexContainer } from './styled';
 
 export const PokedexPage = ()=>{
     const { pokedex } = useContext(GlobalStateContext);
@@ -15,12 +16,12 @@ export const PokedexPage = ()=>{
           title={"Pokédex"}
           leftButtonFunction={() => goToHomePage (history)}
         />
-        <div>
+        <PokedexContainer>
           {pokedex &&
             pokedex.map((pokemon) => {
               return <CardPokemon isPokedex key={pokemon.name} pokemon={pokemon} />;
             })}
-        </div>
+        </PokedexContainer>
       </>
     )
   }
