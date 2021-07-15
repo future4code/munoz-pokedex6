@@ -13,25 +13,44 @@ import {
     MovesContainer,
     PokeInfosContainer
 } from './styled';
-
+import { BASE_URL } from "../../constants/urls";
 import { useHistory } from "react-router-dom";
 import { goToHomePage } from '../../route/coordinator'
 
 
 export const DetailsPage = () => {
     const [selectedPokemon, setSelectedPokemon] = useState({})
-    const { name } = useParams()
-    const { dataPokemon } = useContext(GlobalStateContext)
+    const { name, telaPokedex } = useParams()
+    const { dataPokemon, pokedex } = useContext(GlobalStateContext)
     const history = useHistory()
 
-    console.log(selectedPokemon)
+    
 
     useEffect(() => {
-        const currentPokemon = dataPokemon.find((item) => { return item.name === name })
-        setSelectedPokemon(currentPokemon)
-    }, [])
+        let current = [];
+        if (telaPokedex) {
+          current = pokedex.find((item) => {
+            return item.name === name;
+          });
+        } else {
+          current = dataPokemon.find((item) => {
+            return item.name === name;
+          });
+        }
+    
+        if (!current) {
+          axios
+            .get(`${BASE_URL}/pokemon/${name}`)
+            .then((res) => setSelectedPokemon(res.data))
+            .catch((err) => console.log(err.response.message));
+        } else {
+          setSelectedPokemon(current);
+        }
+      }, []);
+      
     return (
         <>
+        
             <Header
                 title={"Detalhes do Pokemon"}
                 leftButtonFunction={() => history.goBack()}
