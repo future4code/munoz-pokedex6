@@ -31,11 +31,11 @@ export const DetailsPage = () => {
         if (telaPokedex) {
           current = pokedex.find((item) => {
             return item.name === name;
-          });
+          })
         } else {
           current = dataPokemon.find((item) => {
             return item.name === name;
-          });
+          })
         }
     
         if (!current) {
@@ -46,8 +46,8 @@ export const DetailsPage = () => {
         } else {
           setSelectedPokemon(current);
         }
-      }, []);
-      
+      }, [])
+
     return (
         <>
         
