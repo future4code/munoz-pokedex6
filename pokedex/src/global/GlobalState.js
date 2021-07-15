@@ -9,7 +9,6 @@ const GlobalState = (props) => {
     const [pokedex, setPokedex] = useState([])
 
 
-    console.log(dataPokemon)
 
     useEffect(() => {
         getNamePokemon()
