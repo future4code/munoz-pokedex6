@@ -17,6 +17,7 @@ export const PokemonImg = styled.div`
     background: ${backgroundCard};
     display: flex;
     align-items:center;
+    flex-direction: column;
     justify-content: center;
     border: 1px solid gray;
     `

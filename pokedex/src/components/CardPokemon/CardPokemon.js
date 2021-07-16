@@ -59,6 +59,7 @@ export const CardPokemon = (props)=> {
             src={props.pokemon && props.pokemon.sprites.front_default}
             alt={props.pokemon.name}
           />
+          <p>{props.pokemon.name}</p>
         </PokemonImg>
         <ButtonsContainer>
           <button onClick={props.isPokedex ? removeFromPokedex : addToPokedex}>
