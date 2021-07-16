@@ -48,10 +48,10 @@ export const CardPokemon = (props) => {
       return a.id - b.id;
     })
 
-    setPokedex(orderedPokedex);
-    setDataPokemon(orderedPokemons);
+    setPokedex(orderedPokedex)
+    setDataPokemon(orderedPokemons)
   }
-
+  
   return (
     <CardContainer>
       <PokemonImg>
