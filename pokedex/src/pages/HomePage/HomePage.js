@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { CardPokemon } from '../../components/CardPokemon/CardPokemon';
-import { Header} from '../../components/Header/Header';
+import { Header } from '../../components/Header/Header';
 import GlobalStateContext from '../../global/GlobalStateContext';
-import {goToPokedexPage} from '../../route/coordinator'
+import { goToPokedexPage } from '../../route/coordinator'
 import { useHistory } from "react-router-dom";
 import { HomePageContainer } from './styled';
 
@@ -51,7 +51,6 @@ console.log("atualiando input", inputName)
                })
            }
         </HomePageContainer>
-         
         </>
     )
 
