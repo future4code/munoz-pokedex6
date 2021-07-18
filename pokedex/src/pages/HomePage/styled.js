@@ -6,5 +6,9 @@ export const HomePageContainer = styled.main`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
+`
+
   overflow-y: auto;
 `
+

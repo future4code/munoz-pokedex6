@@ -1,8 +1,10 @@
 import React from 'react'
 import { useHistory } from "react-router-dom"
 import { goToPokedexPage } from '../../route/coordinator'
-import { HeaderContainer } from './styled'
+import { HeaderContainer, TituloPokemon } from './styled'
 import AudioPlayer from 'material-ui-audio-player'
+import Pokemon from '../../img/pokemon.png'
+
 
 export const Header = ({ leftButtonFunction, title, showRightButton }) => {
   const history = useHistory();
@@ -22,7 +24,9 @@ export const Header = ({ leftButtonFunction, title, showRightButton }) => {
       <button onClick={leftButtonFunction}>
         {leftButtonTitle()}
       </button>
-      <h1>{title}</h1>
+      
+        <TituloPokemon src={Pokemon} />
+  
       <AudioPlayer
                     elevation={1}
                     width="15%"
