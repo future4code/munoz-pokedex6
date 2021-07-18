@@ -1,10 +1,14 @@
 import React, { useContext, useState } from 'react';
+
 import { CardPokemon } from '../../components/CardPokemon/CardPokemon';
 import { Header } from '../../components/Header/Header';
 import GlobalStateContext from '../../global/GlobalStateContext';
 import { goToPokedexPage } from '../../route/coordinator'
 import { useHistory } from "react-router-dom";
 import { HomePageContainer } from './styled';
+
+
+
 
 export const HomePage = ()=>{
     const [inputName, setInputName] = useState("")
