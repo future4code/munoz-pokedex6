@@ -4,7 +4,10 @@ import {
   CardContainer,
   Img,
   PokemonImg,
-  ButtonsContainer
+  ButtonsContainer,
+  Button,
+  Name
+  
 
 } from './styled';
 import { goToDetailsPage } from "../../route/coordinator";
@@ -54,25 +57,27 @@ export const CardPokemon = (props) => {
   
   return (
     <CardContainer>
+      
       <PokemonImg>
         <Img
           src={props.pokemon && props.pokemon.sprites.front_default}
           alt={props.pokemon.name}
         />
-        <p>{props.pokemon.name}</p>
+        <Name>{props.pokemon.name}</Name>
       </PokemonImg>
       <ButtonsContainer>
-        <button onClick={props.isPokedex ? removeFromPokedex : addToPokedex}>
-          {props.isPokedex ? "Remover da Pokédex" : "Adicionar a Pokédex"}
-        </button>
-        <button
+        <Button onClick={props.isPokedex ? removeFromPokedex : addToPokedex}>
+          {props.isPokedex ? "Remover da Pokédex" : "+ Pokédex"}
+        </Button>
+        <Button
           onClick={() =>
             goToDetailsPage(history, props.pokemon.name, props.isPokedex)
           }
         >
           Ver detalhes
-        </button>
+        </Button>
       </ButtonsContainer>
+      
     </CardContainer>
   )
 }

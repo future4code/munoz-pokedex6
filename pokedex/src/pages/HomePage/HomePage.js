@@ -1,11 +1,14 @@
 import React, { useContext, useState } from 'react';
 
+
 import { CardPokemon } from '../../components/CardPokemon/CardPokemon';
 import { Header } from '../../components/Header/Header';
+import { Footer } from '../../components/Footer/Footer';
 import GlobalStateContext from '../../global/GlobalStateContext';
 import { goToPokedexPage } from '../../route/coordinator'
 import { useHistory } from "react-router-dom";
-import { HomePageContainer } from './styled';
+import { HomePageContainer, Busca, H3, Label } from './styled';
+
 
 
 
@@ -30,7 +33,7 @@ export const HomePage = ()=>{
     //      return (inputName ? dataPokemon.name.toLowerCase().includes(inputName.toLowerCase()) : true)
     // })
 
-console.log("atualiando input", inputName)
+console.log("atualizando input", inputName)
 
     return (
         <>  
@@ -39,14 +42,15 @@ console.log("atualiando input", inputName)
         leftButtonFunction = {() => goToPokedexPage(history)}
         />
         <form >
-            <label>
-                <input
+            <Label>
+              <H3>Busca:</H3> 
+                <Busca
                   type="text"
                   value={inputName}
                   onChange={onChangeName}
                   placeholder="Nome do pokémon"
                 />
-            </label>
+            </Label>
         </form>
         <HomePageContainer>
            {pokeFilter &&
@@ -55,6 +59,13 @@ console.log("atualiando input", inputName)
                })
            }
         </HomePageContainer>
+
+        <Footer>
+           
+        </Footer>
+       
+           
+       
         </>
     )
 
