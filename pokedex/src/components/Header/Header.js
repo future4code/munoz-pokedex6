@@ -24,28 +24,23 @@ export const Header = ({ leftButtonFunction, title, showRightButton }) => {
       <Button onClick={leftButtonFunction}>
         {leftButtonTitle()}
       </Button>
-      
-        <TituloPokemon src={Pokemon} />
 
-      
+      <TituloPokemon src={Pokemon} />
+
+
       <AudioPlayer
-                    elevation={1}
-                    width="10%"
-                    height="5%"
-                    variation="primary"
-                    spacing={1}
-                    download={false}
-                    autoplay={true}
-                    order="standart"
-                    preload="auto"
-                    loop={false}
-                    src={"https://drive.google.com/u/0/uc?id=1nu4NSa-DC-T6CDKQpBEES96JGdt-JyzA&export=.mp3"}
-                />
-                
-      {/* {showRightButton && (
-          <button onClick={() => goToPokedexPage(history)}>
-            Ir para pokedex
-          </button>
-        )} */}
+        elevation={1}
+        width="250px"
+        height="30%"
+        variation="primary"
+        spacing={1}
+        download={false}
+        autoplay={true}
+        order="standart"
+        preload="auto"
+        loop={false}
+        src={"https://drive.google.com/u/0/uc?id=1nu4NSa-DC-T6CDKQpBEES96JGdt-JyzA&export=.mp3"}
+      />
+
     </HeaderContainer>)
 }

@@ -22,7 +22,7 @@ export const ImgWrapper = styled.img`
   background: ${backgroundCard};
   border-radius:30px;
   &:hover{
-    box-shadow: 5px 10px 18px gray;
+    box-shadow: 5px 10px 18px gray;}
 `
 
 export const StatsContainer = styled.div`
@@ -33,9 +33,7 @@ export const StatsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
   padding: 10px;
-
   font-family: Wendy One;
   font-style: normal;
   font-weight: normal;
@@ -44,7 +42,7 @@ export const StatsContainer = styled.div`
   border-radius:30px;
   &:hover{
     box-shadow: 5px 10px 18px gray;
-
+  }
 `
 
 export const TitleContainer = styled.div`
@@ -60,6 +58,7 @@ export const TitleContainer = styled.div`
       display: flex;
       flex-direction: column;
       margin-top:50px;
+    }
 `
 
 export const TypeAndMovesContainer = styled.div`
@@ -81,7 +80,7 @@ export const TypeAndMovesContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+  }
 
 `
 
@@ -94,15 +93,15 @@ export const TypesContainer = styled.div`
   border-radius:30px;
   &:hover{
     box-shadow: 5px 10px 18px gray;
+  }
 
-    @media(min-width: 414px) and (max-width:736px){
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      
+  @media(min-width: 414px) and (max-width:736px){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
 `
-
 export const MovesContainer = styled.div`
 
     background: ${backgroundCard};
@@ -115,12 +114,13 @@ export const MovesContainer = styled.div`
     border-radius:30px;
     &:hover{
       box-shadow: 5px 10px 18px gray;
+    }
 
-      @media(min-width: 414px) and (max-width:736px){
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
+    @media(min-width: 414px) and (max-width:736px){
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+    }
         
     
 `
