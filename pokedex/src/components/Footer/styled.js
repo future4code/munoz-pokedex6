@@ -14,14 +14,11 @@ export const FooterContainer = styled.main`
     justify-content: space-around;
     padding-right:15px;
   }
-  
-  
 `
 
 export const DouglasImg = styled.img`
   width: 90px;
   margin: 19px;
-
 `
 export const RachelImg = styled.img`
   width: 128px;
