@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 
-
 import { CardPokemon } from '../../components/CardPokemon/CardPokemon';
 import { Header } from '../../components/Header/Header';
 import { Footer } from '../../components/Footer/Footer';
@@ -32,8 +31,6 @@ export const HomePage = ()=>{
     //      pokemonFilteredPage.filter((pokemon) => {
     //      return (inputName ? dataPokemon.name.toLowerCase().includes(inputName.toLowerCase()) : true)
     // })
-
-console.log("atualizando input", inputName)
 
     return (
         <>  

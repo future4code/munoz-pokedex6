@@ -3,16 +3,13 @@ import { backgroundCard } from "../../constants/colors";
 
 
 export const CardContainer = styled.div` 
-
     height: 30vh;
     width: 250px;
     margin: 10px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: grid;
     grid-template-rows: 90% 10%;
-  
-    
 `
 
 export const Img = styled.img`
@@ -30,8 +27,9 @@ export const PokemonImg = styled.div`
         box-shadow: 5px 10px 18px gray;
         
         cursor: pointer;
+    }
   
-    `
+`
     
 export const ButtonsContainer = styled.div`
     display: grid;
@@ -59,8 +57,8 @@ export const Button = styled.button`
     color: #FFFFFF;
     &:hover{
         box-shadow: 5px 10px 18px gray;
-        
         cursor: pointer;
+    }
 
 `
 export const Name = styled.p`
@@ -74,10 +72,7 @@ export const Name = styled.p`
     font-weight: normal;
     font-size: 20px;
     line-height: 21px;
-
-
     text-align: center;
     letter-spacing: -0.02em;
-
     color: #000000;
 `

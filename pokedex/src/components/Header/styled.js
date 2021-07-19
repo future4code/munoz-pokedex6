@@ -5,26 +5,26 @@ export const HeaderContainer = styled.main`
   justify-content: space-between;
   padding: 20px;
   background-color: #FA2C11;
+  height: 20vh;
 
-  @media(min-width: 414px) and (max-width:736px){
+  @media (max-width:736px){
     display: flex;
-    flex-direction: column;
-    height:380px;
-}
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 40vh;
+  }
 `
 
 export const TituloPokemon = styled.img`
-  width: 431px;
-  height: 159px;
-  left: 504px;
-  top: 12px;
+  width: 25vw;
+  height: auto;
+  max-height: 18vh;
 
-  @media(min-width: 414px) and (max-width:736px){
-    display: flex;
-    flex-direction: column;
-    width: 331px;
-    height: 159px;
-}
+
+  @media(max-width:736px){
+    width: 70vw;
+    margin: 10px;
+  }
 
 `
 
@@ -48,4 +48,5 @@ export const Button = styled.button`
     box-shadow: 5px 10px 18px #EEDD82;
     
     cursor: pointer;
+  }
 `
