@@ -1,5 +1,5 @@
 # munoz-pokedex6
-azendo entrega do programa da pokeapi
+Fazendo entrega do programa da pokeapi
 
 POR FAVOR, EDITE ESSA MENSAGEM INSERINDO AS INFORMAÇÕES DO SEU PROJETO. COMECE APAGANDO ESSA LINHA.
 
