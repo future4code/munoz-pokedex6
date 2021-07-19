@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from "axios";
 import { useParams } from 'react-router-dom'
 import { Header } from '../../components/Header/Header';
+import { Footer } from '../../components/Footer/Footer';
 import GlobalStateContext from '../../global/GlobalStateContext';
 import {
     TypesContainer,
@@ -11,7 +12,8 @@ import {
     StatsContainer,
     TitleContainer,
     MovesContainer,
-    PokeInfosContainer
+    PokeInfosContainer,
+    H1
 } from './styled';
 import { BASE_URL } from "../../constants/urls";
 import { useHistory } from "react-router-dom";
@@ -56,10 +58,8 @@ export const DetailsPage = () => {
                 leftButtonFunction={() => history.goBack()}
                 showRightButton
 
-            //  title={"Pokédex"}
-            //  leftButtonFunction={() => goToHomePage (history)}
             />
-            <h1>Detalhes Pokemons</h1>
+            <H1>Detalhes Pokemons</H1>
             <PokeInfosContainer>
                 {selectedPokemon && selectedPokemon.sprites &&
                     <ImagesContainer>
@@ -68,16 +68,6 @@ export const DetailsPage = () => {
                     </ImagesContainer>
                 }
 
-            {/* <Header />
-                <button>Voltar</button>
-                <h1>Detalhes Pokemons</h1>
-                <PokeInfosContainer>
-                    {selectedPokemon && selectedPokemon.sprites &&
-                        <ImagesContainer>
-                            <ImgWrapper src={selectedPokemon.sprites.front_default} />
-                            <ImgWrapper src={selectedPokemon.sprites.back_default} />
-                        </ImagesContainer>
-                    } */}
 
                     <StatsContainer>
                         <TitleContainer>Poderes</TitleContainer>
@@ -87,7 +77,7 @@ export const DetailsPage = () => {
                                 return (
                                     <p key={stat.stat.name}>
                                         <strong>{stat.stat.name}: </strong>
-                                        {stat.base_stat}
+                                       {stat.base_stat}
                                     </p>
                                 );
                             })}
@@ -116,6 +106,9 @@ export const DetailsPage = () => {
                         </MovesContainer>
                     </TypeAndMovesContainer>
             </PokeInfosContainer>
+        <Footer>
+        
+        </Footer>
         </>
 
     )
