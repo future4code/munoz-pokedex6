@@ -1,16 +1,21 @@
-# POKEDEX
+# munoz-pokedex6
+Fazendo entrega do programa da pokeapi
 
-Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+POR FAVOR, EDITE ESSA MENSAGEM INSERINDO AS INFORMAÇÕES DO SEU PROJETO. COMECE APAGANDO ESSA LINHA.
 
-Link do Surge: www.link.com.br
+INSIRA O NOME NOME DO PROJETO AQUI
+Pokeapi
 
-O que funciona:
-- Item 1
-- Item 2
+O que funciona
+DESCREVA O QUE FUNCIONA NO SEU PROJETO
+Nesse projeto é possível ver os detalhes de cada pokémon que foram pegos dentro da API, também da para adicionar o pokémon dentro da pokedex.
+Nesse site da para colocar música e aumentar e diminuir o volume
+O que não funciona
+DESCREVA O QUE NÃO FUNCIONA NO SEU PROJETO
+Link Surge
+A PARTIR DA SEMANA 5, INSIRA AQUI O LINK DO SURGE. ANTES DISSO, APAGUE ESSAS DUAS LINHAS.
+http://pokedex6-munoz.surge.sh/
 
-O que não funciona: 
-- Item 3
-- Item 4
+Imagens
+TIRE PRINTS DAS TELAS DO SEU SITE E COLE AQUI
+[image](https://user-images.githubusercontent.com/79290591/126093662-0430bfcd-b804-4b06-b1e2-d9ea1d8cca40.png)
